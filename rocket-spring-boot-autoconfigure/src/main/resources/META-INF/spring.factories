@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.pd.rt.autoconfigure.BaseAutoConfiguration,\
+com.pd.rt.autoconfigure.ProducerAutoConfiguration,\
+com.pd.rt.autoconfigure.ConsumerAutoConfiguration
+
+org.springframework.context.ApplicationListener=\
+com.pd.rt.context.event.WelcomeLogoApplicationListener
