@@ -10,12 +10,11 @@ import org.springframework.context.annotation.ComponentScan;
  * @author peramdy on 2018/9/29.
  */
 @SpringBootApplication
-@ComponentScan(basePackages = "com.pd.app")
-@EnableRtMQConfiguration
+//@EnableRtMQConfiguration
 public class App {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(App.class);
-        application.setBannerMode(Banner.Mode.OFF);
+        application.setBannerMode(Banner.Mode.CONSOLE);
         application.run(args);
     }
 }

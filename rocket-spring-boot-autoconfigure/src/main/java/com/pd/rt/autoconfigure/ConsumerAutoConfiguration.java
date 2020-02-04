@@ -27,7 +27,7 @@ import java.util.UUID;
  * @author peramdy on 2018/9/28.
  */
 @Configuration
-@ConditionalOnBean(BaseAutoConfiguration.class)
+@ConditionalOnBean(value = BaseAutoConfiguration.class, annotation = RtMQConsumer.class)
 public class ConsumerAutoConfiguration extends BaseAutoConfiguration {
 
     private static Logger logger = LoggerFactory.getLogger(ConsumerAutoConfiguration.class);

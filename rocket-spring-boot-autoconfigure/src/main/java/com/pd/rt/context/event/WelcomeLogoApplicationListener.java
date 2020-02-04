@@ -27,10 +27,11 @@ public class WelcomeLogoApplicationListener implements ApplicationListener<Appli
 
     @Override
     public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
-        String bannerText = buildBannerText();
         if (BANNER_MODE == Banner.Mode.OFF) {
             return;
-        } else if (BANNER_MODE == Banner.Mode.CONSOLE) {
+        }
+        String bannerText = buildBannerText();
+        if (BANNER_MODE == Banner.Mode.CONSOLE) {
             System.out.println(bannerText);
         } else if (BANNER_MODE == Banner.Mode.LOG) {
             logger.info(bannerText);
@@ -49,7 +50,9 @@ public class WelcomeLogoApplicationListener implements ApplicationListener<Appli
                 .append(LINE_SEPARATOR)
                 .append(RtMqLogo.logo)
                 .append(LINE_SEPARATOR)
-                .append(" :: Rocket MQ Spring Boot (v1.0.0)")
+//                .append(" :: Rocket MQ Spring Boot (v1.0.0)")
+                .append(" ::  RocketMQ  ::      (v")
+                .append(Version.getVersion()).append(")")
                 .append(LINE_SEPARATOR);
         return bannerTextBuilder.toString();
     }

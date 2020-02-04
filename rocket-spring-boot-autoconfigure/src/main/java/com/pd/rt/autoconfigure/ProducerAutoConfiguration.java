@@ -3,6 +3,7 @@ package com.pd.rt.autoconfigure;
 import com.pd.rt.annotation.RtMQProducer;
 import com.pd.rt.exception.RtException;
 import lombok.Setter;
+import lombok.Value;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
@@ -22,7 +23,7 @@ import java.util.Map;
  * @author peramdy on 2018/9/25.
  */
 @Configuration
-@ConditionalOnBean(BaseAutoConfiguration.class)
+@ConditionalOnBean(value = BaseAutoConfiguration.class,annotation = RtMQProducer.class)
 public class ProducerAutoConfiguration extends BaseAutoConfiguration {
 
     private static Logger logger = LoggerFactory.getLogger(ProducerAutoConfiguration.class);

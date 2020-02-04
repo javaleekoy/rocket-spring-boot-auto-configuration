@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConditionalOnBean(annotation = EnableRtMQConfiguration.class)
-@AutoConfigureAfter({AbstractRtMqProducer.class, AbstractRtConsumer.class})
+//@AutoConfigureAfter({AbstractRtMqProducer.class, AbstractRtConsumer.class})
 @EnableConfigurationProperties(RtProperties.class)
 public class BaseAutoConfiguration implements ApplicationContextAware {
 

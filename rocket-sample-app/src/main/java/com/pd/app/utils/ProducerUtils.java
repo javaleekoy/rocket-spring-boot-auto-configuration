@@ -39,6 +39,16 @@ public class ProducerUtils extends AbstractRtMqProducer {
     }
 
 
+    /**
+     * 消息封装
+     *
+     * @param topic
+     * @param tag
+     * @param key
+     * @param delayLevel
+     * @param msg
+     * @return
+     */
     public Message getMsg(String topic, String tag, String key, Integer delayLevel, Object msg) {
         MessageBuilder builder = new MessageBuilder(topic, tag);
         if (StringUtils.isNotBlank(key)) {
